@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bbagent"
+version = "1.0.0"
+description = "A minimal, self-learning bug bounty hunting AI agent"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+    "openai>=1.0.0,<2",
+    "pyyaml>=6.0,<7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0,<9",
+]
+
+[project.urls]
+Homepage = "https://github.com/NousResearch/hermes-agent"
+
+[project.scripts]
+bbagent = "bbagent:main"
+
+[tool.setuptools]
+py-modules = ["bbagent"]

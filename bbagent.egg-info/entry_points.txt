@@ -1,0 +1,2 @@
+[console_scripts]
+bbagent = bbagent:main

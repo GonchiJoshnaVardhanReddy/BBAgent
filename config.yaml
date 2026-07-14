@@ -1,0 +1,56 @@
+# BBAgent Configuration
+# 
+# Pick ONE provider below. The agent auto-detects from base_url.
+# API keys go in environment variables (NOT this file for security):
+#   OpenAI:      export OPENAI_API_KEY=sk-...
+#   Ollama:      export OLLAMA_API_KEY=ollama         (local, no real key needed)
+#   OpenRouter:  export OPENROUTER_API_KEY=sk-or-...
+#   Google:      export GOOGLE_API_KEY=...
+#   NVIDIA:      export NVIDIA_API_KEY=nvapi-...
+
+# ── Option A: OpenAI ──
+# model: gpt-4o
+# provider: openai
+# base_url: https://api.openai.com/v1
+
+# ── Option B: Ollama (local) ──
+# model: llama3.2
+# provider: ollama
+# base_url: http://localhost:11434/v1
+
+# ── Option C: OpenRouter (many models) ──
+# model: anthropic/claude-3.5-sonnet
+# provider: openrouter
+# base_url: https://openrouter.ai/api/v1
+
+# ── Option D: Google AI Studio ──
+# model: gemini-2.0-flash
+# provider: google
+# base_url: https://generativelanguage.googleapis.com/v1beta/openai
+
+# ── Option E: NVIDIA Build ──
+# model: meta/llama-3.1-70b-instruct
+# provider: nvidia
+# base_url: https://integrate.api.nvidia.com/v1
+
+# ── Option F: Custom OpenAI-compatible endpoint ──
+# model: any-model-name
+# provider: custom
+# base_url: http://your-endpoint:8000/v1
+
+# Active config (uncomment ONE set above, or keep auto-detection):
+provider: auto
+model: ""
+base_url: ""
+
+# Agent behavior
+max_iterations: 30
+max_tokens: 8192
+context_limit: 128000
+subagent_max_iterations: 15
+
+# Enabled toolsets
+tools:
+  core: true
+  memory: true
+  skills: true

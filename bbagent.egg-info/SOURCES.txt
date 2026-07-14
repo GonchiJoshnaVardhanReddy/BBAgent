@@ -1,0 +1,9 @@
+README.md
+bbagent.py
+pyproject.toml
+bbagent.egg-info/PKG-INFO
+bbagent.egg-info/SOURCES.txt
+bbagent.egg-info/dependency_links.txt
+bbagent.egg-info/entry_points.txt
+bbagent.egg-info/requires.txt
+bbagent.egg-info/top_level.txt
